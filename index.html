@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+			overflow-x: hidden;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 65px 10px 65px;
+			position: sticky;
+			top: 0;
+			background: #fff;
+			z-index: 10;
+			/*box-shadow: 0 3px 7px #00000030;*/
+		}
+
+		#brand {
+			display: flex;
+			align-items: center;
+			font-family: 'Righteous';
+		}
+
+		#brand img {
+			margin-right: 10px;
+		}
+
+		#brand #title {
+			font-size: 24px;
+			font-weight: 700 !important;
+			color: #000088;
+		}
+
+		#brand #slogan {
+			font-size: 17px;
+			font-weight: 400 !important;
+			color: #e65c00;
+			font-family: 'Montserrat';
+		}
+
+		.navbar {
+			display: flex;
+		}
+
+		.navbar>* {
+			margin-left: 18px;
+			font-family: 'Cabin';
+			color: #333;
+
+		}
+
+		.navbar a {
+			font-size: 18px;
+			padding: 5px;
+			color: #333;
+			font-weight: 600 !important;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			box-shadow: 0 5px 5px #00000020;
+			max-width: 210px;
+			border-radius: 0 0 5px 5px;
+			padding: 10px;
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 10px 5px 10px 5px;
+			text-decoration: none;
+			display: block;
+			font-size: 17px;
+			color: #333;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.banner {
+			height: calc(100vh - 85px);
+			background-image: url("img/pexels-vlada-karpovich-7025505.jpg");
+			background-position: center right;
+			background-size: cover;
+		}
+
+		.cover {
+			text-align: right;
+			padding: 0 100px 0 100px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			background-image: linear-gradient(105deg,
+					#ffffff00 0%,
+					#ffffff00 40%,
+					#80ccccDF 60%);
+		}
+
+		.cover div:nth-child(2) {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		#banner-title {
+			font-family: 'Righteous';
+			font-size: 80px;
+			font-weight: 700 !important;
+			color: #15159c;
+		}
+
+		#banner-slogan {
+			font-family: 'Montserrat';
+			font-size: 50px;
+			font-weight: 600 !important;
+			color: #946328;
+		}
+
+		.banner-description {
+			padding: 13px;
+			font-family: 'Cabin';
+			font-size: 27px;
+			font-weight: 600 !important;
+			color: black;
+			background: #FFF5;
+			 border-radius: 17px;
+			width: max-content;
+			margin: 10px;
+			display: flex;
+			align-items: center;
+			text-align: left;
+		}
+
+		.banner-description a {
+			color: black;
+		}
+
+		.banner-description :hover {
+			color: white;
+
+		}
+
+		#banner-info {
+			font-family: 'Cabin';
+			color: #fff;
+			font-size: 20px;
+			font-weight: 500 !important;
+			line-height: 30px;
+		}
+
+		#banner-info i {
+			width: 20px;
+			color: #FFE4E4;
+		}
+
+		#banner-info a {
+			color: #fff;
+		}
+
+		.section {
+			/*padding: 80px;*/
+			/*background: #f9f9f9;*/
+		}
+
+		.intro {
+			display: flex;
+			/*box-shadow: 0 6px 12px #00000028;*/
+			/*padding: 15px;*/
+			background: #fff;
+		}
+
+		.intro>div {
+			width: 50%;
+		}
+
+		#intro-description {
+			box-sizing: border-box;
+			padding: 90px 50px;
+		}
+
+		h3 {
+			font-family: 'Montserrat';
+			color: #70bcbc;
+			margin-top: 0;
+			font-size: 45px;
+			text-align: center;
+
+		}
+
+		#intro-description p {
+			font-family: 'Cabin';
+			text-align: justify;
+			font-size: 18px;
+			color: #333;
+			line-height: 30px;
+		}
+
+		button {
+			font-family: 'Montserrat';
+			font-weight: 600;
+			border: none;
+			outline: none;
+			padding: 10px;
+			background: #80cccc;
+			font-size: 17px;
+			color: #fff;
+			cursor: pointer;
+			transition: box-shadow 0.3s ease-in-out;
+			border-radius: 10px;
+		}
+
+		button:hover {
+			background: #70bcbc;
+		}
+
+		#intro-video {
+			box-sizing: border-box;
+			padding: 100px 50px;
+			background: #E7717D;
+		}
+
+		#intro-video iframe {}
+
+		.reason {
+			padding: 90px;
+			background: #80cccc;
+		}
+
+		.reason h3 {
+			color: #fff;
+		}
+
+		.reason-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.reason-list>* {
+			margin: 20px;
+			width: 27%;
+		}
+
+		.reason-item>div:nth-child(1) {
+			display: grid;
+			align-items: center;
+			justify-content: center;
+			background: #fff;
+			height: 85px;
+			width: 85px;
+			font-size: 20px;
+			/*box-shadow: 0 6px 12px #00000028;*/
+			color: #6EB6FF;
+			margin: 0 auto 15px;
+			border-radius: 50%;
+		}
+
+		.reason-item>div:nth-child(1) img {
+			width: 70px;
+			height: 70px;
+		}
+
+		.reason-item>div:nth-child(2) {
+			padding: 20px;
+			background: #fff;
+			font-family: "Cabin";
+			color: #555;
+			border-radius: 20px;
+		}
+
+		.reason-item span {
+			font-weight: 600;
+			margin-bottom: 15px;
+			font-size: 19px;
+		}
+
+		.reason-item p {
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+
+		.course {
+			padding: 90px;
+			/*background: #FFE4E4;*/
+			background: #E7717D;
+			text-align: center;
+		}
+
+		.course h3 {
+			color: #FFF;
+		}
+
+		.course>span {
+			font-size: 18px;
+			font-family: "Cabin";
+			color: #fff;
+		}
+
+		.course-list {
+			width: 70%;
+			margin: 50px auto 0;
+		}
+
+		.course-item {
+			display: flex;
+			height: 215px;
+			margin-top: 35px;
+			background: #fff;
+			border-radius: 20px;
+		}
+
+		.course-item img {
+			height: 100%;
+			border-radius: 20px;
+		}
+
+		.course-item span {
+			font-size: 18px;
+			font-family: "Cabin";
+			color: #333;
+		}
+
+		.course-item>div:nth-child(2) {
+			text-align: left;
+			padding: 20px;
+		}
+
+		.course-item>div:nth-child(2) h4 {
+			font-family: "Montserrat";
+			font-size: 20px;
+			margin: 0;
+			color: #333;
+		}
+
+		.course-item>div:nth-child(2) h5 {
+			font-family: "Montserrat";
+			font-size: 16px;
+			margin-top: 0;
+			color: #888;
+		}
+
+		.review {
+			padding: 90px;
+			background: #eafaff;
+		}
+
+		.review-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.review-list>* {
+			width: 37.5%;
+			border-radius: 20px;
+			box-sizing: border-box;
+			padding: 25px;
+			padding-bottom: 0;
+			margin: 35px;
+			background: #80cccc88;
+			height: max-content;
+		}
+
+		.review-item>div:nth-child(1) {
+			color: #333;
+			font-family: 'Cabin';
+			font-size: 20px;
+			text-align: justify;
+		}
+
+		.review-item>div:nth-child(2) {
+			display: flex;
+			align-items: center;
+			padding: 10px;
+			border-radius: 100px;
+			width: max-content;
+			background: #80cccc;
+			border: 5px solid #eafaff;
+			color: #333;
+			font-family: 'Cabin';
+			font-size: 22px;
+			font-weight: 600;
+			transform: translateX(-40px) translateY(20px);
+		}
+
+		.review-item>div:nth-child(2) img {
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+
+		.faculty {
+			padding: 90px;
+		}
+
+		.faculty-content {
+			text-align: center;
+		}
+
+		.faculty img {
+			width: 80%;
+		}
+
+		.news {
+			padding: 90px;
+			padding-top: 0;
+		}
+
+		.news h3 {
+			text-align: center;
+		}
+
+		.news-list {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.news-list>a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #80cccc;
+			padding: 15px;
+			width: 37.5%;
+			margin: 15px;
+			border-radius: 15px;
+		}
+
+		.news-list>a img {
+			width: 120px;
+			margin-right: 10px;
+		}
+
+		.news-list>a h5 {
+			font-family: 'Cabin';
+			color: #333;
+			font-weight: 600;
+			font-size: 19px;
+			margin: 0;
+		}
+
+		.news-list>a span {
+			font-family: 'Cabin';
+			color: #333;
+			font-size: 17px;
+		}
+
+		.form {
+			background: #E7717D;
+			padding: 90px;
+		}
+
+		.form h3 {
+			color: #fff;
+			text-align: center;
+		}
+
+		.ftr {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 45px 90px;
+			background: #80cccc;
+			justify-content: space-between;
+		}
+
+		.ftr>div {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.ftr>div a {
+			color: #333;
+			font-family: 'Cabin';
+			font-size: 19px;
+		}
+
+		.ftr>div h4 {
+			margin: 0;
+			margin-bottom: 10px;
+			font-family: 'Cabin';
+			font-size: 20px;
+			color: #333;
+		}
+
+		.ftr>div p {
+			margin: 0;
+			font-family: 'Cabin';
+			font-size: 19px;
+			color: #333;
+		}
+
+		.copyright {
+			background: #60acac;
+			text-align: center;
+			padding: 10px;
+			font-family: 'Cabin';
+			font-weight: 600;
+			font-size: 19px;
+			color: #fff;
+		}
+
+		.contact-form {
+			max-width: 100%;
+			margin: 0 auto;
+			font-size: 22px;
+			color: #000;
+		}
+
+		.contact-form p {
+			margin-bottom: 0 !important;
+		}
+
+		.contact-form input[type=text],
+		.contact-form input[type=email],
+		.contact-form textarea {
+			font-family: 'Cabin', sans-serif;
+			font-weight: 500;
+			border: 0;
+			font-size: 15px;
+			padding: 5px 0;
+			width: 100%;
+			line-height: 25px;
+			color: rgb(255, 255, 255);
+			margin-bottom: 35px;
+			text-indent: 10px;
+			background-color: transparent;
+			border-bottom: 3px solid;
+		}
+
+		.contact-form textarea {
+			height: 150px;
+		}
+
+		.contact-form input[type=text]::placeholder,
+		.contact-form input[type=email]::placeholder,
+		.contact-form textarea::placeholder {
+			font-family: 'Cabin', sans-serif;
+			color: rgb(255, 255, 255);
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 25px;
+			opacity: 1;
+		}
+
+		.contact-form input[type=text]:ms-input-placeholder,
+		.contact-form input[type=email]:ms-input-placeholder,
+		.contact-form textarea:ms-input-placeholder {
+			font-family: 'Cabin', sans-serif;
+			color: rgb(255, 255, 255);
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 25px;
+		}
+
+		.contact-form input[type=text]::ms-input-placeholder,
+		.contact-form input[type=email]::ms-input-placeholder,
+		.contact-form textarea::ms-input-placeholder {
+			font-family: 'Cabin', sans-serif;
+			color: rgb(255, 255, 255);
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 25px;
+		}
+
+		.contact-form input[name="your-name"] {
+			margin-top: 0;
+		}
+
+		.contact-submit-holder {
+			position: relative;
+			margin-bottom: 25px;
+		}
+
+		.contact-form input[type=submit] {
+			color: #fff;
+			background-color: #E7717D;
+			text-align: center;
+			padding: 10px 40px;
+			cursor: pointer;
+			text-decoration: none;
+			transition: all .2s linear;
+			margin-bottom: 17px;
+			display: block;
+			width: 100%;
+			line-height: 35px;
+			border: 2px solid #fff;
+			border-radius: 50px;
+			font-size: 14px;
+			letter-spacing: 2px;
+			box-sizing: border-box;
+		}
+
+		.contact-form input[type=submit]:hover {
+			background-color: #fff;
+			color: #E7717D;
+		}
+
+		.one_half,
+		.one_third,
+		.two_third,
+		.three_fourth,
+		.one_fourth {
+			margin-right: 8%;
+			float: left;
+			position: relative;
+			margin-bottom: 30px;
+		}
+
+		.last {
+			margin-right: 0 !important;
+			clear: right;
+		}
+
+		.one {
+			display: block;
+			clear: both;
+			margin-bottom: 30px;
+		}
+
+		.one_half {
+			width: 46%;
+		}
+
+		.medium-text {
+			font-family: 'Montserrat';
+			color: #FFF;
+			font-size: 100px;
+			line-height: 120%;
+			font-weight: 700;
+			padding-bottom: 35px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<a id="brand" href=""><img src="img/logo-tt-nhan-hoa.jpg" height=65px>
+			<div><span id="title">NHÂN HÒA</span>
+				<div id="slogan">Tận Tâm Đồng Hành</div>
+			</div>
+		</a>
+		<div class="navbar">
+			<span><a href="">Giới thiệu</a></span>
+			<span class="dropdown">
+				<a href="" class="dropbtn">Chương trình can thiệp <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Dạy Trẻ Tự Kỷ</a>
+					<a href="#">Dạy Trẻ Chậm Nói</a>
+					<a href="#">Trẻ Tăng Động</a>
+					<a href="#">Trẻ Chậm Phát Triển</a>
+				</div>
+			</span>
+			<span><a href="">Cơ sở vật chất</a></span>
+			<span class="dropdown"><a href="">Tư vấn <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Các Bước Giúp Phát Triển Ngôn Ngữ Cho Trẻ Nhỏ</a>
+				</div>
+			</span>
+			<span class="dropdown"><a href="">Tin tức <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Tuyển Dụng</a>
+				</div>
+			</span>
+			<span class="dropdown"><a href="">Tài liệu <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Dành Cho Giáo Viên</a>
+					<a href="#">Dành Cho Phụ Huynh</a>
+				</div>
+			</span>
+			<span><a href="">Liên hệ</a></span>
+		</div>
+	</div>
+
+	<div class="banner" id="banner1">
+		<div class="cover">
+			<div>
+				<span id="banner-title">NHÂN HÒA</span><br>
+				<span id="banner-slogan">Tận Tâm Đồng Hành</span>
+			</div>
+			<div>
+				<button class="banner-description"><a href="" id="mang1">Dịch vụ trẻ em</a></button>
+				<button class="banner-description"><a href="" id="mang2">Dịch vụ người trưởng thành</a></button>
+			</div>
+			<div id="banner-info">
+				<a href="mailto:trungtamnhanhoa2014@gmail.com">trungtamnhanhoa2014@gmail.com <i
+						class="fas fa-envelope"></i></a>
+				<br>
+				<a href="tel:0987174279">0987 174 279 <i class="fas fa-phone-alt"></i></a>
+				<br>
+				Số 16, đường số 18, phường 8, quận Gò Vấp, TPHCM <i class="fas fa-map-marker-alt"></i>
+				<br>
+				30/4 Nguyễn Cửu Vâm, phường 17, quận Bình Thạnh, TPHCM <i class="fas fa-map-marker-alt"></i>
+				<br>
+				Phạm Văn Chiêu, quận Gò Vấp, TPHCM <i class="fas fa-map-marker-alt"></i>
+			</div>
+		</div>
+	</div>
+
+	<div class="section about">
+		<div class="intro">
+			<div id="intro-description" data-aos="fade-right" data-aos-delay="150" data-aos-duration="500">
+				<h3>Trung Tâm Hỗ Trợ Phát Triển Giáo Dục Hòa Nhập Nhân Hòa</h3>
+				<p>Với tiền thân là Trung tâm tư vấn trị liệu Tâm lý - Âm ngữ Hướng Dương, Trung tâm Hỗ trợ phát triển
+					giáo dục hòa nhập Nhân Hòa là hệ thống dạy trẻ Chậm phát triển, trẻ tự kỷ, trẻ chậm nói, trẻ tăng
+					động kém chú ý uy tín, trách nhiệm nhất tại thành phố Hồ Chí Minh được rất nhiều phụ huynh tin
+					tưởng. Với chất lượng giảng dạy luôn được đề cao và phương châm "TẬN TÂM ĐỒNG HÀNH" sự phát triển
+					của trẻ luôn là vấn đề được quan tâm hàng đầu khi trẻ học tại đây.</p>
+				<button>XEM CHI TIẾT</button>
+			</div>
+			<div id="intro-video" data-aos="fade-left" data-aos-delay="150" data-aos-duration="500">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Y67OP0bQMcc"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<div class="reason">
+			<h3>LÝ DO CHỌN TRUNG TÂM NHÂN HÒA</h3>
+			<div class="reason-list">
+				<div class="reason-item pink">
+					<div class="reason-icon"><img src="img/icons8-tick-64.png"></div>
+					<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
+
+						<span>Chẩn đoán chính xác - Chương trình can thiệp phù hợp</span>
+						<p>Trung tâm được sự hỗ trợ chuyên môn trực tiếp từ bác sĩ Phan Thiệu Xuân Giang - Bác sĩ đầu
+							ngành trong thành phố trong lĩnh vực chẩn đoán và đưa ra phương hướng can thiệp cho trẻ tự
+							kỷ và tất cả các vấn đề về cảm xúc, hành vi và phát vấn đề về phát triển khác.</p>
+
+					</div>
+				</div>
+				<div class="reason-item">
+					<div class="reason-icon"><img src="img/icons8-teacher-64.png"></div>
+					<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
+						<span>Giáo viên can thiệp có chuyên môn cao</span>
+						<p>Giáo viên can thiệp tại trung tâm là những cử nhân, giáo viên tốt nghiệp từ đại học trở lên
+							các ngành Tâm lý, giáo dục đặc biệt, công tác xã hội, mầm non và được huấn luyện các kiến
+							thức về về can thiệp sớm cho trẻ chậm phát triển, trẻ tăng động, Âm ngữ trị liệu, về các
+							thang lượng giá kỹ năng của trẻ một cách chi tiết, phát triển chuyên môn kỹ năng can thiệp
+							cá nhân, nhóm tốt với một tinh thần làm việc nghiêm túc và yêu thương trẻ hết lòng.</p>
+					</div>
+				</div>
+				<div class="reason-item pink">
+					<div class="reason-icon"><img src="img/icons8-group-64.png"></div>
+					<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
+						<span>Địa điểm can thiệp uy tín</span>
+						<p>Trung tâm luôn coi chất lượng giảng dạy và sự phát tiển tiến bộ của trẻ là ưu tiên hàng đầu.
+							Trẻ học tại trung tâm luôn có những phát triển tốt và nhận được sự phản hồi tích cực từ phía
+							phụ huynh. Ngoài ra trung tâm luôn phối hợp với các bậc phụ huynh vì cha mẹ là người thầy
+							tốt nhất của trẻ nên tất cả các phòng học đều được trang bị camera. Phụ huynh có thể tham dự
+							các buổi học và được thầy cô ghi chép một cách kỹ lưỡng về sự phát triển của trẻ để phụ
+							huynh dễ dàng theo dõi trẻ và dạy con ở nhà.</p>
+					</div>
+				</div>
+				<div class="reason-item">
+					<div class="reason-icon"><img src="img/icons8-school-64.png"></div>
+					<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
+						<span>Môi trường giảng dạy</span>
+						<p>Tự hào là một trong những trung tâm hỗ trợ phát triển giáo dục hòa nhập ngoài công lập có cơ
+							sở hạ tầng lớn nhất tại Tp. Hồ Chí Minh, Trung tâm có tất cả các phòng can thiệp cá nhân,
+							nhóm, phòng vận động với những đồ chơi thương hiệu cao cấp và an toàn cho trẻ.<br><br>Môi
+							trường can thiệp luôn tạo cho trẻ sự thích thú khi tham gia học tại nơi đây.</p>
+					</div>
+				</div>
+				<div class="reason-item pink">
+					<div class="reason-icon"><img src="img/icons8-learning-64.png"></div>
+					<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
+						<span>Chương trình học đa dạng và có tính chức năng cao</span>
+						<p>Chương trình học được áp dụng cho 03 nhóm trẻ chính, bao gồm: Trẻ chậm phát triển; trẻ Tự kỷ;
+							Trẻ tăng động kém chú ý.<br><br>Mục tiêu can thiệp được thiết kế riêng đối với mỗi trẻ và
+							mỗi vấn đề trẻ đang gặp phải để trẻ dễ dàng tiếp thu và tiến bộ.</p>
+					</div>
+				</div>
+				<div class="reason-item">
+					<div class="reason-icon"><img src="img/icons8-certificate-64.png"></div>
+					<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
+						<span>Thành tựu</span>
+						<p>Từ khi thành lập, Trung tâm đã hỗ trợ được cho hàng trăm trẻ em có các vấn đề về hành vi,nhận
+							thức, giao tiếp… giúp các tham gia được vào chương trình giáo dục phổ thông và giao tiếp
+							hiệu quả hơn.<br><br>Hiện tại Trung tâm đang được đánh giá là một trong những trung tâm can
+							thiệp cho trẻ Tự kỷ, trẻ chậm phát triển, trẻ chậm nói, trẻ tăng động kém chú ý có chất
+							lượng can thiệp đánh giá thông qua sự phát triển của trẻ hàng đầu tại Tp. Hồ Chí Minh.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section course">
+		<h3>CÁC KHÓA HỌC TẠI TRUNG TÂM NHÂN HÒA</h3>
+		<span style="font-size:23px;">Tuỳ vào từng mức độ của các bé chúng tôi đều có phương pháp giảng dạy sao cho
+			thích hợp nhất.</span>
+		<div class="course-list">
+			<div class="course-item" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="500">
+				<div>
+					<img src="img/tre-tu-ky-600x400.jpg">
+				</div>
+				<div>
+					<h4>DẠY TRẺ TỰ KỶ</h4>
+					<h5>2 - 10 tuổi</h5>
+					<span>Giúp các bé trở nên thân thiện với những người xung quanh và giao tiếp với bạn bè dễ
+						dàng.</span>
+					<br><br>
+					<button>XEM CHI TIẾT</button>
+				</div>
+			</div>
+			<div class="course-item" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="500">
+				<div>
+					<img src="img/tre-cham-noi-600x400.jpg">
+				</div>
+				<div>
+					<h4>DẠY TRẺ CHẬM NÓI</h4>
+					<h5>2 - 10 tuổi</h5>
+					<span>Giúp bé có những hành động, câu nói rõ ràng và ý thức được chính mình qua từng hành
+						động.</span>
+					<br><br>
+					<button>XEM CHI TIẾT</button>
+				</div>
+			</div>
+			<div class="course-item" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="500">
+				<div>
+					<img src="img/tre-cham-phat-trien.jpg">
+				</div>
+				<div>
+					<h4>DẠY TRẺ CHẬM PHÁT TRIỂN</h4>
+					<h5>2 - 10 tuổi</h5>
+					<span>Giúp các bé định hướng phát triển tư duy và những hành động rõ ràng và năng động hơn.</span>
+					<br><br>
+					<button>XEM CHI TIẾT</button>
+				</div>
+			</div>
+			<div class="course-item" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="500">
+				<div>
+					<img src="img/tre-td-600x400.jpg">
+				</div>
+				<div>
+					<h4>DẠY TRẺ TĂNG ĐỘNG</h4>
+					<h5>2 - 10 tuổi</h5>
+					<span>Giúp trẻ tăng động có khả năng nhận biết được hành vi cảm xúc của mình một cách bình
+						thường</span>
+					<br><br>
+					<button>XEM CHI TIẾT</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section review">
+		<h3>PHỤ HUYNH VÀ HỌC VIÊN NÓI VỀ TRUNG TÂM NHÂN HÒA</h3>
+		<div class="review-list">
+			<div class="review-item">
+				<div>
+					"Tại trung tâm Nhân Hòa các giáo viên đều được tuyển chọn kỹ lưỡng để có thể đáp ứng được nhu cầu
+					giảng dạy đạt kết quả cao. Với các bé đã trở nên hòa đồng và ý thức được các hành vi và cảm xúc của
+					mình. Tôi cảm ơn trung tâm rất nhiều đã giúp con tôi có một môi trường tốt."
+				</div>
+				<div>
+					<img src="img/1.png">
+					<span>Anh Hải (Phụ huynh)</span>
+
+				</div>
+			</div>
+			<div class="review-item">
+				<div>
+					"Từ lúc con tôi lên 2 tuổi đã thấy cháu không hành động bình thường, thường làm những việc theo cảm
+					xúc. Từ khi cho cháu học tại trung tâm cháu đã kiểm soát được các hành vi của mình. Chúc trung tâm
+					mang đến nhiều niềm vui cho các bậc phụ huynh hơn."
+				</div>
+				<div>
+					<img src="img/2.jpg">
+					<span>Anh Tiến (Phụ huynh)</span>
+
+				</div>
+			</div>
+			<div class="review-item">
+				<div>
+					"Điều khiến tôi cảm thấy tuyệt vời nhất tại Trung tâm Nhân Hòa đã đem đến cho con chúng tôi được
+					hoàn hảo hơn. Từ năm 4 tuổi tôi nghĩ gia đình tôi đã bất lực nhưng từ khi tìm đến trung tâm cho cháu
+					học 2 năm cháu đã trở lên hòa đồng hơn rất nhiều với bạn bè, người thân."
+				</div>
+				<div>
+					<img src="img/3.jpg">
+					<span>Chị Thắm (Phụ huynh)</span>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section faculty">
+		<h3>CƠ SỞ VẬT CHẤT</h3>
+		<div class="faculty-content">
+			<img src="img/cosovatchat.jpg">
+			<img src="img/team.jpg">
+		</div>
+	</div>
+
+	<div class="section news">
+		<h3>TIN TỨC & SỰ KIỆN</h3>
+		<div class="news-list">
+			<a href="">
+				<div>
+					<img src="img/tang-dong-kem-chu-y-edited-1280x800.png">
+				</div>
+				<div>
+					<h5>Trẻ tăng động giảm chú ý là gì? Dấu hiệu và gợi ý can thiệp</h5>
+					<span>Tăng động là gì? Biểu hiện tăng động giảm chú ý ở trẻ. Quan sát[...]</span>
+				</div>
+			</a>
+			<a href="">
+				<div>
+					<img src="img/bo-diu-con-2-697x800.png">
+				</div>
+				<div>
+					<h5>CAN THIỆP CHO TRẺ TĂNG ĐỘNG GIẢM CHÚ Ý – CÁC CÁCH GIÚP CHA MẸ TẠO ĐỘNG LỰC CHO TRẺ VÀ GIÚP TRẺ
+						HỌC TẬP HIỆU QUẢ HƠN.</h5>
+					<span>PHẦN 2- ĐỘNG LỰC BÊN NGOÀI Tại sao chúng ta lại cần biết đến nhiều[...]</span>
+				</div>
+			</a>
+			<a href="">
+				<div>
+					<img src="img/benh-tang-dong-giam-chu-y-2.jpg">
+				</div>
+				<div>
+					<h5>CAN THIỆP CHO TRẺ TĂNG ĐỘNG GIẢM CHÚ Ý – CÁC CÁCH GIÚP CHA MẸ TẠO ĐỘNG LỰC CHO TRẺ VÀ GIÚP TRẺ
+						HỌC TẬP HIỆU QUẢ HƠN.</h5>
+					<span>PHẦN 1- ĐỘNG LỰC BÊN TRONG ĐỘNG LỰC LÀM VIỆC LÀ GÌ? CÓ QUAN TRỌNG[...]</span>
+				</div>
+			</a>
+			<a href="">
+				<div>
+					<img src="img/logo-tt-nhan-hoa.jpg">
+				</div>
+				<div>
+					<h5>Tuyển dụng giáo viên can thiệp trẻ tự kỷ, tăng động, chậm phát triển tại Tp. HCM</h5>
+					<span>Trung tâm HTPT GDHN Nhân Hòa Tuyển giáo viên can thiệp trẻ tự kỷ, trẻ[...]</span>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="section form">
+		<br>
+		<h3>ĐIỀN THÔNG TIN ĐỂ NHẬN TƯ VẤN KHÓA HỌC</h3>
+		<div id="contact" class="section">
+			<div class="section-wrapper block content-1170 center-relative">
+				<div class="content-wrapper">
+					<div class="one_half ">
+						<h2 class="entry-title medium-text">
+							Lets start <br>
+							working
+						</h2>
+						<br>
+					</div>
+
+					<div class="one_half last ">
+						<div class="contact-form">
+							<p>
+								<input id="name" type="text" name="your-name" placeholder="Tên">
+							</p>
+							<p>
+								<input id="contact-email" type="email" name="your-email" placeholder="Email">
+							</p>
+							<p>
+								<input id="subject" type="text" name="your-subject" placeholder="Vấn đề của bạn là gì?">
+							</p>
+							<p>
+								<textarea id="message" name="your-message" placeholder="Tin nhắn"></textarea>
+							</p>
+							<p class="contact-submit-holder">
+								<input type="submit" value="SEND">
+							</p>
+
+						</div>
+
+					</div>
+
+				</div>
+				<div>
+					<p>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4274.290564544589!2d-75.2952832049782!3d40.753669641460846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1444506658649"
+							width="100%" height="450" allowfullscreen="allowfullscreen"></iframe>
+					</p>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+	<div class="ftr">
+		<div>
+			<img src="img/logo-tt-nhan-hoa.jpg">
+		</div>
+		<div>
+			<a>Giới Thiệu trung tâm Nhân Hòa</a>
+			<a>Chương trình can thiệp</a>
+			<a>Tư vấn</a>
+			<a>Thư viện</a>
+		</div>
+		<div>
+			<a>Tin tức sự kiện</a>
+			<a>Thông tin nhà trường</a>
+			<a>Điều khoản sử dụng</a>
+			<a>Chính sách bảo mật</a>
+		</div>
+		<div>
+			<h4>NGUYỄN THỊ THU</h4>
+			<p>CN Tâm lý - Chuyên viên Âm ngữ liệu Giám Đốc</p>
+			<a href="tel:0987174279"><i class="fas fa-phone-alt"></i> 0987 174 279</a>
+			<a href="mailto:nguyenthupsy@gmail.com"><i class="fas fa-envelope"></i> nguyenthupsy@gmail.com</a>
+			<a><i class="fas fa-map-marker-alt"></i> Số 16, Đường 18, Q.Gò Vấp, TP.HCM</a>
+
+		</div>
+
+	</div>
+	<div class="copyright">
+		&copy; 2022
+	</div>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	<script type="text/javascript">
+		var btn1 = document.getElementById('mang1');
+		var btn2 = document.getElementById('mang2');
+		btn1.onmouseover = function () {
+			document.getElementById('banner1').style.backgroundImage = 'url("img/pexels-vlada-karpovich-7025505.jpg")';
+		};
+		btn2.onmouseover = function () {
+			document.getElementById('banner1').style.backgroundImage = 'url("img/team.jpg")';
+		};
+	</script>
+</body>
+
+</html>
