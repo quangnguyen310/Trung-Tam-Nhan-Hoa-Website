@@ -711,7 +711,7 @@ button:hover {
 		position: absolute;
 		left: 0;
 		top: 0;
-		padding: 34px 35px;
+		padding: 22.5px 35px;
 		background: #fff;
 		box-sizing: border-box;
 		z-index: 10;
@@ -895,5 +895,9 @@ button:hover {
 	.copyright{
 		padding: 20px;
 		font-size: 18px;
+	}
+	.toggle-btn{
+		color: #fff;
+		width: 35px;
 	}
 }
