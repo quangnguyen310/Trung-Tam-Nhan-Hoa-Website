@@ -688,6 +688,32 @@ button:hover {
 .middle{
 	text-align: center;
 }
+		.content-page ul,li,ol{
+			font-family: 'Cabin';
+			font-size: 19px;
+			color: #333;
+			text-align: justify;
+			line-height: 30px;
+		}
+		.image{
+			width: 70%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.image img{
+			width: 100%;
+		}
+		.image i{
+			font-family: 'Cabin';
+			font-size: 16px;
+			color: #555;
+		}
+		.middle{
+			text-align: center;
+		}
+		.italic{
+			font-style: italic;
+		}
 @media(max-width: 670px){
 	body{
 		overflow-x: hidden;
