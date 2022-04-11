@@ -717,7 +717,7 @@ button:hover {
 		.italic{
 			font-style: italic;
 		}
-@media(max-width: 1080px){
+@media(max-width: 990px){
 	body{
 		overflow-x: hidden;
 	}
