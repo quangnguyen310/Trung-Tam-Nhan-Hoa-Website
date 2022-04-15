@@ -227,6 +227,9 @@ button:hover {
 	background: #70bcbc;
 }
 
+button a{
+	color: #FFF;
+}
 #intro-video {
 	box-sizing: border-box;
 	padding: 100px 50px;
@@ -477,7 +480,7 @@ button:hover {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 45px 90px;
-	background: #80cccc;
+	background: #ffffff;
 	justify-content: space-between;
 }
 
@@ -490,6 +493,9 @@ button:hover {
 	color: #333;
 	font-family: 'Cabin';
 	font-size: 19px;
+}
+.ftr>div a:hover{
+	text-decoration: underline;
 }
 
 .ftr>div h4 {
@@ -530,6 +536,7 @@ button:hover {
 
 .contact-form input[type=text],
 .contact-form input[type=email],
+.contact-form input[type=phone],
 .contact-form textarea {
 	font-family: 'Cabin', sans-serif;
 	font-weight: 500;
@@ -551,6 +558,7 @@ button:hover {
 
 .contact-form input[type=text]::placeholder,
 .contact-form input[type=email]::placeholder,
+.contact-form input[type=phone]::placeholder,
 .contact-form textarea::placeholder {
 	font-family: 'Cabin', sans-serif;
 	color: rgb(255, 255, 255);
@@ -562,6 +570,7 @@ button:hover {
 
 .contact-form input[type=text]:ms-input-placeholder,
 .contact-form input[type=email]:ms-input-placeholder,
+.contact-form input[type=phone]:ms-input-placeholder,
 .contact-form textarea:ms-input-placeholder {
 	font-family: 'Cabin', sans-serif;
 	color: rgb(255, 255, 255);
@@ -572,6 +581,7 @@ button:hover {
 
 .contact-form input[type=text]::ms-input-placeholder,
 .contact-form input[type=email]::ms-input-placeholder,
+.contact-form input[type=phone]::ms-input-placeholder,
 .contact-form textarea::ms-input-placeholder {
 	font-family: 'Cabin', sans-serif;
 	color: rgb(255, 255, 255);
@@ -890,21 +900,23 @@ button:hover {
 	.one_half h2{
 	}
 	.ftr{
-		padding: 25px;
+		padding: 10	px;
 	}
 	.ftr>div{
 		padding-bottom: 10px;
 		border-bottom: 1px solid #333;
 		margin-bottom: 10px;
+		line-height: 20px;
 	}
 	.ftr>div:nth-child(1){
-		width: 100%;
+		width: 50%;
 		text-align: center !important;
 		border-bottom: none;
+		line-height: 20px;
 	}
 	.ftr>div:nth-child(1) img{
-/* 		width: 70%; */
 		margin: 0 auto;
+		
 	}
 	.content-page{
 		padding: 25px;
