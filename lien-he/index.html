@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>NHÂN HÒA - Tận Tâm Đồng Hành</title>
+	<link rel="icon" href="../img/logo-rmv.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body>
+	<div class="header">
+		<div class="menu"><button onclick="showmenu()">bla</button></div>
+		<div class="navbar collapse-menu" id="menu">
+			<button onclick="closemenu()">blaclose</button>
+			<span><a href="../index.html">Trang chủ</a></span>
+			<span><a href="../gioi-thieu/index.html">Giới thiệu</a></span>
+			<span class="dropdown">
+				<a href="Javascript:void(0);" class="dropbtn">Các dịch vụ <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="../day-tre-tu-ky/index.html">Dạy Trẻ Tự Kỷ</a>
+					<a href="../day-tre-cham-noi/index.html">Dạy Trẻ Chậm Nói</a>
+					<a href="../day-tre-tang-dong/index.html">Trẻ Tăng Động</a>
+					<a href="../tre-cham-phat-trien/index.html">Trẻ Chậm Phát Triển</a>
+					<a href="../tam-ly-tri-lieu/index.html">Tâm Lý Trị Liệu</a>
+				</div>
+			</span>
+			<span><a href="">Cơ sở vật chất</a></span>
+			<span class="dropdown"><a href="Javascript:void(0);">Tư vấn <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Các Bước Giúp Phát Triển Ngôn Ngữ Cho Trẻ Nhỏ</a>
+				</div>
+			</span>
+			<span class="dropdown"><a href="Javascript:void(0);">Tin tức <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Tuyển Dụng</a>
+				</div>
+			</span>
+			<span class="dropdown"><a href="Javascript:void(0);">Tài liệu <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Dành Cho Giáo Viên</a>
+					<a href="#">Dành Cho Phụ Huynh</a>
+				</div>
+			</span>
+			<span><a href="../lien-he/index.html">Liên hệ</a></span>
+		</div>
+		<a id="brand" href="../index.html"><img src="../img/logo-tt-nhan-hoa.jpg" height=65px>
+			<div><span id="title">NHÂN HÒA</span>
+				<div id="slogan">Tận Tâm Đồng Hành</div>
+			</div>
+		</a>
+		<div class="navbar">
+			<span><a href="../index.html">Trang chủ</a></span>
+			<span><a href="../gioi-thieu/index.html">Giới thiệu</a></span>
+			<span class="dropdown">
+				<a href="Javascript:void(0);" class="dropbtn">Các dịch vụ <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="../day-tre-tu-ky/index.html">Dạy Trẻ Tự Kỷ</a>
+					<a href="../day-tre-cham-noi/index.html">Dạy Trẻ Chậm Nói</a>
+					<a href="../day-tre-tang-dong/index.html">Trẻ Tăng Động</a>
+					<a href="../tre-cham-phat-trien/index.html">Trẻ Chậm Phát Triển</a>
+					<a href="../tam-ly-tri-lieu/index.html">Tâm Lý Trị Liệu</a>
+				</div>
+			</span>
+			<span><a href="">Cơ sở vật chất</a></span>
+			<span class="dropdown"><a href="Javascript:void(0);">Tư vấn <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Các Bước Giúp Phát Triển Ngôn Ngữ Cho Trẻ Nhỏ</a>
+				</div>
+			</span>
+			<span class="dropdown"><a href="Javascript:void(0);">Tin tức <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Tuyển Dụng</a>
+				</div>
+			</span>
+			<span class="dropdown"><a href="Javascript:void(0);">Tài liệu <i class="fas fa-angle-down"></i></a>
+				<div class="dropdown-content">
+					<a href="#">Dành Cho Giáo Viên</a>
+					<a href="#">Dành Cho Phụ Huynh</a>
+				</div>
+			</span>
+			<span><a href="../lien-he/index.html">Liên hệ</a></span>
+		</div>
+	</div>
+
+	<div class="section form">
+		<h3>ĐIỀN THÔNG TIN ĐỂ NHẬN TƯ VẤN KHÓA HỌC</h3>
+		<div id="contact" class="section">
+			<div class="section-wrapper block content-1170 center-relative">
+				<div class="content-wrapper">
+					<div class="one_half ">
+						<h2 class="entry-title medium-text">
+							Lets start <br>
+							working
+						</h2>
+						<br>
+					</div>
+
+					<div class="one_half last ">
+						<div class="contact-form">
+							<p>
+								<input id="name" type="text" name="your-name" placeholder="Tên">
+							</p>
+							<p>
+								<input id="contact-email" type="email" name="your-email" placeholder="Email">
+							</p>
+							<p>
+								<input id="subject" type="text" name="your-subject" placeholder="Vấn đề của bạn là gì?">
+							</p>
+							<p>
+								<textarea id="message" name="your-message" placeholder="Tin nhắn"></textarea>
+							</p>
+							<p class="contact-submit-holder">
+								<input type="submit" value="SEND">
+							</p>
+
+						</div>
+
+					</div>
+
+				</div>
+				<div>
+					<p>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4274.290564544589!2d-75.2952832049782!3d40.753669641460846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1444506658649"
+							width="100%" height="450" allowfullscreen="allowfullscreen"></iframe>
+					</p>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<div class="ftr">
+		<div>
+			<img src="../img/logo-rmv.png">
+		</div>
+		<div>
+			<a>Giới Thiệu trung tâm Nhân Hòa</a>
+			<a>Chương trình can thiệp</a>
+			<a>Tư vấn</a>
+			<a>Thư viện</a>
+		</div>
+		<div>
+			<a>Tin tức sự kiện</a>
+			<a>Thông tin nhà trường</a>
+			<a>Điều khoản sử dụng</a>
+			<a>Chính sách bảo mật</a>
+		</div>
+		<div>
+			<h4>NGUYỄN THỊ THU</h4>
+			<p>CN Tâm lý - Chuyên viên Âm ngữ liệu Giám Đốc</p>
+			<a href="tel:0987174279"><i class="fas fa-phone-alt"></i> 0987 174 279</a>
+			<a href="mailto:nguyenthupsy@gmail.com"><i class="fas fa-envelope"></i> nguyenthupsy@gmail.com</a>
+			<a><i class="fas fa-map-marker-alt"></i> Số 16, Đường 18, Q.Gò Vấp, TP.HCM</a>
+
+		</div>
+	</div>
+	<div class="copyright">
+		&copy; 2022
+	</div>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	</script>
+	<script type="text/javascript">
+		function showmenu() {
+			document.getElementById('menu').style.display = "block";
+		}
+		function closemenu() {
+			document.getElementById('menu').style.display = "none";
+		}
+	</script>
+</body>
+
+</html>
