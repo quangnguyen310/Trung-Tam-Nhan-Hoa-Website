@@ -374,6 +374,8 @@
 		</div>
 	</div>
 
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+	onload="if(submitted) {window.location='cam-on/index.html';}"></iframe>
 	<div class="section form">
 		<h3>ĐIỀN THÔNG TIN ĐỂ NHẬN TƯ VẤN KHÓA HỌC</h3>
 		<div id="contact" class="section">
@@ -386,31 +388,34 @@
 						</h2>
 						<br>
 					</div>
-
+					<form action="https://docs.google.com/forms/d/e/1FAIpQLSeaZUYMmeQGtcnWSCX6GgVLPnnDkBMSV89Hakv3G_ZTWBYlvQ/formResponse"
+					method="post" target="hidden_iframe" onsubmit="validateForm();">
 					<div class="one_half last ">
+						
 						<div class="contact-form">
 							<p>
-								<input id="name" type="text" name="your-name" placeholder="Tên">
+								<input type="text" placeholder="Tên" id="name" required name="entry.25658293">
 							</p>
 							<p>
-								<input id="contact-email" type="email" name="your-email" placeholder="Email">
+								<input type="text" placeholder="Email" id="email" required name="entry.1541470600">
+				
 							</p>
 							<p>
-								<input id="phone" type="phone" name="your-phone" placeholder="Số điện thoại">
+								<input type="text" placeholder="Số điện thoại" id="phone" required name="entry.1748375977">
 							</p>
 							<p>
-								<input id="subject" type="text" name="your-subject" placeholder="Vấn đề của bạn là gì?">
+								<input type="text" placeholder="Thời gian có thể liên hệ" id="time" required name="entry.1073630926">
 							</p>
 							<p>
-								<textarea id="message" name="your-message" placeholder="Tin nhắn"></textarea>
+								<textarea type="text" placeholder="Vấn đề của bạn" id="message" required name="entry.2077220246"></textarea>
 							</p>
 							<p class="contact-submit-holder">
 								<input type="submit" value="SEND">
 							</p>
 
 						</div>
-
 					</div>
+				</form>
 
 				</div>
 				<div>
@@ -424,7 +429,6 @@
 
 
 		</div>
-
 	</div>
 	<div class="ftr">
 		<div>
@@ -477,6 +481,13 @@
 			document.getElementById('menu').style.display = "none";
 		}
 	</script>
+		<script type="text/javascript">var submitted = false;</script>
+		<script type="text/javascript">
+			function validateForm() {
+					submitted = true;
+					return true;
+			}
+		</script>
 </body>
 
 </html>
