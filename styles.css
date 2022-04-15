@@ -480,7 +480,7 @@ button a{
 	display: flex;
 	flex-wrap: wrap;
 	padding: 45px 90px;
-	background: #ffffff;
+	background: #60acac;
 	justify-content: space-between;
 }
 
@@ -514,13 +514,13 @@ button a{
 }
 
 .copyright {
-	background: #60acac;
+	background: #ffffff;
 	text-align: center;
 	padding: 15px;
 	font-family: 'Cabin';
 	font-weight: 600;
 	font-size: 19px;
-	color: #fff;
+	color: #60acac;
 }
 
 .contact-form {
